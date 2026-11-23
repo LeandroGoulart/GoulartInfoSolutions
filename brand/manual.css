@@ -1,0 +1,37 @@
+/* Extras do manual de marca. Base tipográfica vem de assets/css/site.css */
+.m-head{padding:clamp(3rem,7vw,5.5rem) 0 clamp(2.5rem,5vw,4rem)}
+.m-head h1{font-size:var(--t-xxl);line-height:1.04;margin-bottom:1.25rem}
+.m-head p{font-size:var(--t-m);max-width:var(--medida)}
+.stage{background:var(--casco);border:1px solid var(--linha);border-radius:var(--raio);padding:clamp(1.5rem,4vw,3rem);display:grid;place-items:center}
+.stage--light{background:#fff;border-color:#C9D6E6}
+.stage--abismo{background:var(--abismo)}
+.stage img{width:min(100%,640px);height:auto}
+.stage--mark img{width:min(60%,220px)}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.25rem}
+@media (max-width:860px){.grid2{grid-template-columns:1fr}.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.cap{font-size:.95rem;color:var(--bruma);margin:.6rem 0 0}
+.sw{border:1px solid var(--linha);border-radius:var(--raio);overflow:hidden;background:var(--casco)}
+.sw__cor{height:6.5rem}
+.sw__txt{padding:.85rem 1rem 1rem}
+.sw__txt b{font-family:var(--font-display);font-size:var(--t-m);display:block;margin-bottom:.15rem}
+.sw__txt p{margin:0;font-size:.92rem;color:var(--bruma);line-height:1.45}
+.sw__txt code{font-family:var(--font-text);font-weight:600;color:var(--nevoa)}
+.tbl{width:100%;border-collapse:collapse;font-size:.98rem}
+.tbl th,.tbl td{text-align:left;padding:.75rem 1rem .75rem 0;border-bottom:1px solid var(--linha);vertical-align:top}
+.tbl th{font-family:var(--font-display);font-weight:600;color:var(--nevoa)}
+.tbl td{color:var(--nevoa)}
+.tbl td.m{color:var(--bruma)}
+.spec{border-top:1px solid var(--linha);padding:1.5rem 0}
+.spec .d{font-family:var(--font-display);font-weight:700;font-style:italic;font-size:var(--t-xl);line-height:1.1;margin:0 0 .6rem}
+.spec .t{font-family:var(--font-text);font-size:var(--t-m);margin:0 0 .6rem}
+.spec .glifos{font-family:var(--font-display);font-style:italic;font-weight:600;font-size:1.25rem;color:var(--bruma);letter-spacing:.04em;margin:0}
+.sim,.nao{padding:1rem 1.25rem;border:1px solid var(--linha);border-radius:var(--raio);background:var(--casco)}
+.sim{border-left:4px solid var(--sinal)}
+.nao{border-left:4px solid var(--escalonamento)}
+.sim p,.nao p{margin:0}
+.sim b,.nao b{font-family:var(--font-display);display:block;margin-bottom:.25rem}
+pre.code{background:var(--casco);border:1px solid var(--linha);border-radius:var(--raio);padding:1rem;overflow:auto;font-size:.85rem;line-height:1.5;color:var(--nevoa);max-height:22rem}
+.app img{width:100%;height:auto;border:1px solid var(--linha);border-radius:var(--raio)}
+.clear{position:relative;width:min(100%,640px)}
+.clear img{width:100%;outline:1px dashed var(--escalonamento);outline-offset:0}
