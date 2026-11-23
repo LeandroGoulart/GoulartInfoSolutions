@@ -14,6 +14,9 @@ with sync_playwright() as p:
         pg.screenshot(path=R+out,omit_background=True); pg.close()
     # logos e favicons vêm prontos do pacote v1 (brand/logo e brand/png); aqui só as peças
     O='brand/png/'
+    for o,wd in (('horizontal',2000),('vertical',1200)):
+        for v,bg in (('escuro','#070E18'),('claro','#FFFFFF'),('mono-branco',None),('mono-escuro',None)):
+            svg_png(f'brand/logo/goulart-{o}-{v}.svg',O+f'goulart-{o}-{v}.png',wd)
     def page_png(src,out,w,h,wait=600):
         pg=b.new_page(viewport={'width':w,'height':h}); pg.goto('file://'+R+src); pg.wait_for_timeout(wait)
         pg.screenshot(path=R+out); pg.close()
