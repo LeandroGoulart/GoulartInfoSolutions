@@ -14,10 +14,11 @@ Site estático, sem build e sem chamadas externas. Fontes hospedadas no próprio
 | `assets/js/config.js` | **Contato comercial.** Único arquivo a editar para trocar e-mail e WhatsApp |
 | `assets/fonts/` | Chakra Petch e IBM Plex Sans (licença OFL) |
 | `brand/manual.html` | Manual de marca: logotipo, cor, tipografia, voz, aplicações |
-| `brand/logo/` | Logotipos em SVG (textos já em curvas): horizontal, monograma, claro, escuro, uma cor, favicon |
+| `brand/logo/` | Logotipos em SVG: horizontal (claro/escuro) e monograma Gi (fundo claro, fundo escuro, mono branco, mono escuro) |
+| `brand/arte/` | Arte de bancada (hero) em PNG original |
 | `brand/png/` | PNG prontos: logotipos, favicons, preview social, banner do LinkedIn |
 | `brand/applications/` | Fontes HTML do preview social, do banner e da assinatura de e-mail |
-| `tools/` | Scripts que regeneram os SVG e os PNG |
+| `tools/` | `gen_png.py`: regenera preview social, banner e prévia da assinatura |
 
 ## Publicar no GitHub Pages
 
@@ -27,14 +28,14 @@ Site estático, sem build e sem chamadas externas. Fontes hospedadas no próprio
 
 Se usar domínio próprio, troque as duas URLs absolutas (`og:image` e `og:url`) no `<head>` do `index.html` e a URL do logotipo em `brand/applications/assinatura-email.html`.
 
-## Regenerar logotipo e PNG
+## Regenerar peças
+
+Logos e arte vêm do pacote `goulart-identidade-visual-v1` (não são gerados por código).
 
 ```bash
 cd tools
-npm install
-python3 -m pip install fonttools playwright && python3 -m playwright install chromium
-python3 make_logo.py   # SVG do logotipo, em ../brand/logo/
-python3 gen_png.py     # PNG, em ../brand/png/ e ../assets/img/
+python3 -m pip install playwright && python3 -m playwright install chromium
+python3 gen_png.py   # PNG de brand/applications em ../brand/png/ e ../assets/img/og.png
 ```
 
 ## Pendências antes de divulgar

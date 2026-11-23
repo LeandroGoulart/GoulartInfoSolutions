@@ -1,0 +1,24 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Cartão institucional (90 × 50 mm)</title>
+<link rel="stylesheet" href="../../assets/css/tokens.css">
+<style>
+:root{--azul-marinho:#101820;--vinho:#681C32;--prata:#C2C5CA;--papel:#F4F4F2}
+*{box-sizing:border-box}
+body{margin:0;padding:24px;background:#d9dcdf;display:flex;gap:24px;font-family:var(--font-text)}
+.card{width:90mm;height:50mm;position:relative;overflow:hidden;flex:none}
+.frente{background:var(--azul-marinho);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4.2mm}
+.frente img{width:19mm;height:19mm;display:block}
+.frente .nome{font-family:var(--font-display);font-weight:600;color:#fff;letter-spacing:.32em;font-size:3.3mm;margin-right:-.32em;text-align:center;line-height:1.5}
+.frente .nome small{display:block;font-size:2.1mm;letter-spacing:.5em;margin-right:-.5em;color:var(--prata)}
+.frente::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.2mm;background:var(--vinho)}
+.verso{background:var(--papel);color:var(--azul-marinho);padding:7mm 8mm}
+.verso h1{margin:0;font-family:var(--font-display);font-weight:600;font-size:4.6mm;letter-spacing:.01em}
+.verso .serv{margin:1mm 0 0;font-size:2.7mm;color:#4b5560}
+.verso hr{border:0;border-top:.35mm solid var(--vinho);width:9mm;margin:4.5mm 0 4mm;text-align:left}
+.verso ul{list-style:none;margin:0;padding:0;font-size:2.9mm;line-height:1.75}
+.verso .emp{position:absolute;right:8mm;top:7mm;font-family:var(--font-display);font-weight:600;font-size:2.2mm;letter-spacing:.2em;color:var(--vinho)}
+</style></head><body>
+<div class="card frente"><img src="../logo/gi-mono-branco.svg" alt=""><div class="nome">GOULART<small>INFOSOLUTIONS</small></div></div>
+<div class="card verso">
+<h1>Leandro Goulart</h1><p class="serv">Serviços de TI por alocação</p><hr>
+<ul><li>(31) 99187-9759 · WhatsApp</li><li>leandrovgoulart@gmail.com</li><li>leandrogoulart.github.io/GoulartInfoSolutions</li></ul></div>
+</body></html>

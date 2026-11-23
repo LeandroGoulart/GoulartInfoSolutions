@@ -12,14 +12,8 @@ with sync_playwright() as p:
         pg=b.new_page(viewport={'width':width,'height':H})
         pg.goto('file://'+R+src); pg.wait_for_timeout(300)
         pg.screenshot(path=R+out,omit_background=True); pg.close()
-    L='brand/logo/'; O='brand/png/'
-    svg_png(L+'goulart-infosolutions-horizontal.svg',O+'logo-horizontal-dark-2000.png',2000)
-    svg_png(L+'goulart-infosolutions-horizontal-light.svg',O+'logo-horizontal-light-2000.png',2000)
-    svg_png(L+'goulart-infosolutions-marca.svg',O+'logo-marca-1024.png',1024)
-    svg_png(L+'goulart-infosolutions-marca-light.svg',O+'logo-marca-light-512.png',512)
-    for n in (32,180,512): svg_png(L+'favicon.svg',O+f'favicon-{n}.png',n)
-    shutil.copy(R+O+'favicon-180.png',R+'assets/img/apple-touch-icon.png')
-    shutil.copy(R+O+'favicon-32.png',R+'assets/img/favicon-32.png')
+    # logos e favicons vêm prontos do pacote v1 (brand/logo e brand/png); aqui só as peças
+    O='brand/png/'
     def page_png(src,out,w,h,wait=600):
         pg=b.new_page(viewport={'width':w,'height':h}); pg.goto('file://'+R+src); pg.wait_for_timeout(wait)
         pg.screenshot(path=R+out); pg.close()
